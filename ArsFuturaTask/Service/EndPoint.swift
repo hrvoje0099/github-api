@@ -16,7 +16,10 @@ extension Endpoint {
     var request: URLRequest {
         let url = urlComponents.url!
         var urlRequest = URLRequest(url: url)
-        urlRequest.setValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        
+        // add your GitHub token to have more API calls
+        // urlRequest.setValue("Bearer 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", forHTTPHeaderField: "Authorization")
+        
         return urlRequest
     }
 }
