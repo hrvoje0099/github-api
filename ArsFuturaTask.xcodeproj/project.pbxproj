@@ -113,6 +113,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B00260C6276BBEBD00513354 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B0C9551A2745B317000230C5 /* UserCell.swift */,
+				B0F441E8274A4A17003C8DF5 /* RepoCell.swift */,
+				B0597711274D605100996077 /* DataCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B00260C7276BBECD00513354 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B0F441E0274988AD003C8DF5 /* UserInfoHeaderBig.swift */,
+				B059770F274D412700996077 /* UserInfoHeaderSmall.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		B05976F5274C374600996077 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,14 +212,11 @@
 		B0C9551627459227000230C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B00260C7276BBECD00513354 /* Headers */,
+				B00260C6276BBEBD00513354 /* Cells */,
 				B0C955172745923E000230C5 /* UsersView.swift */,
 				B0C9551C2745B346000230C5 /* UserView.swift */,
 				B0F441E6274A46FE003C8DF5 /* RepoView.swift */,
-				B0F441E0274988AD003C8DF5 /* UserInfoHeaderBig.swift */,
-				B059770F274D412700996077 /* UserInfoHeaderSmall.swift */,
-				B0C9551A2745B317000230C5 /* UserCell.swift */,
-				B0F441E8274A4A17003C8DF5 /* RepoCell.swift */,
-				B0597711274D605100996077 /* DataCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
