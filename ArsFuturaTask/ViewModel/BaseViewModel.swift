@@ -43,13 +43,13 @@ class BaseViewModel {
     func processError(error: RequestError) {
         switch error {
         case .noData:
-            self.alertMessage = UserAlert.noDataError.rawValue
+            self.alertMessage = RequestError.noData.description
         case .dataDecodingError:
-            self.alertMessage = UserAlert.dataDecodingError.rawValue
+            self.alertMessage = RequestError.dataDecodingError.description
         case .apiError:
-            self.alertMessage = UserAlert.apiError.rawValue
+            self.alertMessage = RequestError.apiError.description
         case .invalidResponse:
-            self.alertMessage = UserAlert.invalidResponseError.rawValue
+            self.alertMessage = RequestError.invalidResponse.description
         }
     }
 }
