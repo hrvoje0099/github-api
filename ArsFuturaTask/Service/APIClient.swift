@@ -7,11 +7,24 @@
 
 import Foundation
 
-enum RequestError: String, Error {
+enum RequestError: Error, CustomStringConvertible {
     case noData
     case dataDecodingError
     case apiError
     case invalidResponse
+    
+    var description: String {
+        switch self {
+        case .noData:
+            return "Message for no data error..."
+        case .dataDecodingError:
+            return "Message for data decoding error..."
+        case .apiError:
+            return "Message for API error..."
+        case .invalidResponse:
+            return "Message for invalid response error..."
+        }
+    }
 }
 
 protocol APIClientProtocol {

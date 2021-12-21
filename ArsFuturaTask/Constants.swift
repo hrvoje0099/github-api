@@ -18,10 +18,3 @@ enum Constants {
         static let paynesColor = UIColor(red: 0.24, green: 0.24, blue: 0.26, alpha: 1)
     }
 }
-
-enum UserAlert: String, Error {
-    case noDataError = "Message for no data error..."
-    case dataDecodingError = "Message for data decoding error..."
-    case apiError = "Message for API error..."
-    case invalidResponseError = "Message for invalid response error..."
-}
