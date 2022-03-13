@@ -32,7 +32,7 @@ final class UserViewModel: BaseViewModel, UserViewModelProtocol {
     private var userDetails = User(publicRepos: 0)
     
     private let repository: Repository
-    private var user: Users
+    private let user: Users
     
     private var repos = [Repo]() {
         didSet {

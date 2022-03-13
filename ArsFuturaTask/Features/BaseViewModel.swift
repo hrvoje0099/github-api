@@ -16,7 +16,7 @@ protocol BaseViewModelProtocol {
     var showAlertClosure: (()->())? { get set }
 }
 
-class BaseViewModel {
+class BaseViewModel: BaseViewModelProtocol {
     
     // MARK: - PROTOCOL PROPERTIES
     

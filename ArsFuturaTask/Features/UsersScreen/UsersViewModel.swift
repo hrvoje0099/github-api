@@ -54,7 +54,7 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
         repository.getUsers { [weak self] result in
             self?.isLoading = false
             
-            switch result{
+            switch result {
             case .success(let users):
                 self?.users = users
             case .failure(let error):
@@ -77,7 +77,7 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
         repository.getUsersNextPage(sinceId: sinceUserId) { [weak self] result in
             self?.isLoading = false
             
-            switch result{
+            switch result {
             case .success(let users):
                 if !users.isEmpty { self?.users += users }
             case .failure(let error):
@@ -92,7 +92,7 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
         repository.searchUsers(userLoginName: userLoginName) { [weak self] result in
             self?.isLoading = false
             
-            switch result{
+            switch result {
             case .success(let searchUsers):
                 self?.users = searchUsers.items
                 self?.searchUsersTotalCount = searchUsers.totalCount
@@ -108,7 +108,7 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
         repository.getSearchUsersNextPage(userLoginName: userLoginName, page: page) { [weak self] result in
             self?.isLoading = false
             
-            switch result{
+            switch result {
             case .success(let searchUsers):
                 self?.users += searchUsers.items
             case .failure(let error):

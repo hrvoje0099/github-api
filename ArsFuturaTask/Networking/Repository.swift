@@ -22,7 +22,6 @@ struct Repository {
     // MARK: - API FUNCTIONS
     
     func getUsers(completion: @escaping (Result<[Users], RequestError>) -> Void) {
-        
         apiClient.getUsers(from: .getUsers) { result in
             switch result {
             case .success(let users):
