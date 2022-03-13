@@ -143,17 +143,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B059770C274D213500996077 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B0E488542760F46A00E2FBFE /* BaseViewModel.swift */,
-				B06AFB94275F8AC500FB0EA2 /* UsersViewModel.swift */,
-				B06AFB98275F8AE400FB0EA2 /* UserViewModel.swift */,
-				B059770A274D210800996077 /* RepoViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		B06C2A9C2766C1D1004865E9 /* ArsFuturaTaskTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,51 +175,24 @@
 				B07284AE2745871200753AF3 /* AppDelegate.swift */,
 				B07284B02745871200753AF3 /* SceneDelegate.swift */,
 				B0C955242745BB4D000230C5 /* Constants.swift */,
+				EE13EA8E27DDF9B000D01552 /* Features */,
+				B0F441EA274A5958003C8DF5 /* Networking */,
 				B05976F5274C374600996077 /* Extensions */,
-				B0F441EA274A5958003C8DF5 /* Service */,
-				B0C955192745B0E1000230C5 /* Model */,
-				B059770C274D213500996077 /* ViewModel */,
-				B0C955152745921C000230C5 /* ViewControllers */,
 				B0C9551627459227000230C5 /* Views */,
-				B07284B72745871700753AF3 /* Assets.xcassets */,
-				B07284B92745871700753AF3 /* LaunchScreen.storyboard */,
+				EE13EA9227DDFB0E00D01552 /* Resources */,
 				B07284BC2745871700753AF3 /* Info.plist */,
 			);
 			path = ArsFuturaTask;
 			sourceTree = "<group>";
 		};
-		B0C955152745921C000230C5 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				B07284B22745871200753AF3 /* UsersViewController.swift */,
-				B0F441E2274A4591003C8DF5 /* UserViewController.swift */,
-				B0F441E4274A46F5003C8DF5 /* RepoViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		B0C9551627459227000230C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B07284B92745871700753AF3 /* LaunchScreen.storyboard */,
 				B00260C7276BBECD00513354 /* Headers */,
 				B00260C6276BBEBD00513354 /* Cells */,
-				B0C955172745923E000230C5 /* UsersView.swift */,
-				B0C9551C2745B346000230C5 /* UserView.swift */,
-				B0F441E6274A46FE003C8DF5 /* RepoView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		B0C955192745B0E1000230C5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B0C9551E2745B450000230C5 /* Users.swift */,
-				B0E336922766726C00D136FE /* User.swift */,
-				B0F441EB274A597D003C8DF5 /* SearchUsers.swift */,
-				B0F441ED274A59A8003C8DF5 /* Repo.swift */,
-				B0597708274D1C7200996077 /* RepoSection.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B0E488532760E28000E2FBFE /* ImageLoader */ = {
@@ -242,7 +204,7 @@
 			path = ImageLoader;
 			sourceTree = "<group>";
 		};
-		B0F441EA274A5958003C8DF5 /* Service */ = {
+		B0F441EA274A5958003C8DF5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				B0E488532760E28000E2FBFE /* ImageLoader */,
@@ -250,7 +212,61 @@
 				B06AFB9C275F990F00FB0EA2 /* APIClient.swift */,
 				B06AFB9E275FC76500FB0EA2 /* EndPoint.swift */,
 			);
-			path = Service;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EE13EA8E27DDF9B000D01552 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B0E488542760F46A00E2FBFE /* BaseViewModel.swift */,
+				EE13EA8F27DDF9D700D01552 /* UsersScreen */,
+				EE13EA9027DDF9F100D01552 /* UserScreen */,
+				EE13EA9127DDF9F500D01552 /* RepoScreen */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EE13EA8F27DDF9D700D01552 /* UsersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B07284B22745871200753AF3 /* UsersViewController.swift */,
+				B0C955172745923E000230C5 /* UsersView.swift */,
+				B06AFB94275F8AC500FB0EA2 /* UsersViewModel.swift */,
+				B0C9551E2745B450000230C5 /* Users.swift */,
+				B0F441EB274A597D003C8DF5 /* SearchUsers.swift */,
+			);
+			path = UsersScreen;
+			sourceTree = "<group>";
+		};
+		EE13EA9027DDF9F100D01552 /* UserScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B0F441E2274A4591003C8DF5 /* UserViewController.swift */,
+				B0C9551C2745B346000230C5 /* UserView.swift */,
+				B06AFB98275F8AE400FB0EA2 /* UserViewModel.swift */,
+				B0E336922766726C00D136FE /* User.swift */,
+			);
+			path = UserScreen;
+			sourceTree = "<group>";
+		};
+		EE13EA9127DDF9F500D01552 /* RepoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B0F441E4274A46F5003C8DF5 /* RepoViewController.swift */,
+				B0F441E6274A46FE003C8DF5 /* RepoView.swift */,
+				B059770A274D210800996077 /* RepoViewModel.swift */,
+				B0F441ED274A59A8003C8DF5 /* Repo.swift */,
+				B0597708274D1C7200996077 /* RepoSection.swift */,
+			);
+			path = RepoScreen;
+			sourceTree = "<group>";
+		};
+		EE13EA9227DDFB0E00D01552 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B07284B72745871700753AF3 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
