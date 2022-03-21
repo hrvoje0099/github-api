@@ -113,9 +113,7 @@ extension UsersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let userViewModel = usersViewModel.createUserViewModel(forUserAt: indexPath)
-        let userVC = UserViewController(viewModel: userViewModel)
-        self.navigationController?.pushViewController(userVC, animated: true)
+        usersViewModel.selectUser(at: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

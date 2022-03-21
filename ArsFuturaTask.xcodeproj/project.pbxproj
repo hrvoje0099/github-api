@@ -42,6 +42,11 @@
 		B0F441E9274A4A17003C8DF5 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F441E8274A4A17003C8DF5 /* RepoCell.swift */; };
 		B0F441EC274A597D003C8DF5 /* SearchUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F441EB274A597D003C8DF5 /* SearchUsers.swift */; };
 		B0F441EE274A59A8003C8DF5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F441ED274A59A8003C8DF5 /* Repo.swift */; };
+		EE13EA9427DE671F00D01552 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13EA9327DE671F00D01552 /* Coordinator.swift */; };
+		EE13EA9627DE67CD00D01552 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13EA9527DE67CD00D01552 /* AppCoordinator.swift */; };
+		EE13EA9827DE6B8500D01552 /* UsersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13EA9727DE6B8500D01552 /* UsersCoordinator.swift */; };
+		EE13EA9A27DE742A00D01552 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13EA9927DE742A00D01552 /* UserCoordinator.swift */; };
+		EE13EA9C27DE7A0E00D01552 /* RepoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13EA9B27DE7A0E00D01552 /* RepoCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,11 @@
 		B0F441E8274A4A17003C8DF5 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		B0F441EB274A597D003C8DF5 /* SearchUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsers.swift; sourceTree = "<group>"; };
 		B0F441ED274A59A8003C8DF5 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		EE13EA9327DE671F00D01552 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EE13EA9527DE67CD00D01552 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EE13EA9727DE6B8500D01552 /* UsersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCoordinator.swift; sourceTree = "<group>"; };
+		EE13EA9927DE742A00D01552 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
+		EE13EA9B27DE7A0E00D01552 /* RepoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +228,8 @@
 		EE13EA8E27DDF9B000D01552 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EE13EA9327DE671F00D01552 /* Coordinator.swift */,
+				EE13EA9527DE67CD00D01552 /* AppCoordinator.swift */,
 				B0E488542760F46A00E2FBFE /* BaseViewModel.swift */,
 				EE13EA8F27DDF9D700D01552 /* UsersScreen */,
 				EE13EA9027DDF9F100D01552 /* UserScreen */,
@@ -229,6 +241,7 @@
 		EE13EA8F27DDF9D700D01552 /* UsersScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EE13EA9727DE6B8500D01552 /* UsersCoordinator.swift */,
 				B07284B22745871200753AF3 /* UsersViewController.swift */,
 				B0C955172745923E000230C5 /* UsersView.swift */,
 				B06AFB94275F8AC500FB0EA2 /* UsersViewModel.swift */,
@@ -241,6 +254,7 @@
 		EE13EA9027DDF9F100D01552 /* UserScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EE13EA9927DE742A00D01552 /* UserCoordinator.swift */,
 				B0F441E2274A4591003C8DF5 /* UserViewController.swift */,
 				B0C9551C2745B346000230C5 /* UserView.swift */,
 				B06AFB98275F8AE400FB0EA2 /* UserViewModel.swift */,
@@ -252,6 +266,7 @@
 		EE13EA9127DDF9F500D01552 /* RepoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				EE13EA9B27DE7A0E00D01552 /* RepoCoordinator.swift */,
 				B0F441E4274A46F5003C8DF5 /* RepoViewController.swift */,
 				B0F441E6274A46FE003C8DF5 /* RepoView.swift */,
 				B059770A274D210800996077 /* RepoViewModel.swift */,
@@ -379,6 +394,8 @@
 			files = (
 				B018BE87274EE6250012FCA8 /* DateFormatter+Convert.swift in Sources */,
 				B06AFB95275F8AC500FB0EA2 /* UsersViewModel.swift in Sources */,
+				EE13EA9627DE67CD00D01552 /* AppCoordinator.swift in Sources */,
+				EE13EA9A27DE742A00D01552 /* UserCoordinator.swift in Sources */,
 				B0C9552B2746990F000230C5 /* UIImageView+Load.swift in Sources */,
 				B06AFB9D275F990F00FB0EA2 /* APIClient.swift in Sources */,
 				B0E336932766726C00D136FE /* User.swift in Sources */,
@@ -388,12 +405,14 @@
 				B0C9551D2745B346000230C5 /* UserView.swift in Sources */,
 				B0C95527274698F4000230C5 /* ImageLoader.swift in Sources */,
 				B07284AF2745871200753AF3 /* AppDelegate.swift in Sources */,
+				EE13EA9C27DE7A0E00D01552 /* RepoCoordinator.swift in Sources */,
 				B0F441EC274A597D003C8DF5 /* SearchUsers.swift in Sources */,
 				B0C9552927469901000230C5 /* UIImageLoader.swift in Sources */,
 				B0E488552760F46A00E2FBFE /* BaseViewModel.swift in Sources */,
 				B06AFB9F275FC76500FB0EA2 /* EndPoint.swift in Sources */,
 				B06AFB99275F8AE400FB0EA2 /* UserViewModel.swift in Sources */,
 				B0F441E9274A4A17003C8DF5 /* RepoCell.swift in Sources */,
+				EE13EA9427DE671F00D01552 /* Coordinator.swift in Sources */,
 				B0F441E3274A4591003C8DF5 /* UserViewController.swift in Sources */,
 				B0F441E5274A46F5003C8DF5 /* RepoViewController.swift in Sources */,
 				B07284B12745871200753AF3 /* SceneDelegate.swift in Sources */,
@@ -407,6 +426,7 @@
 				B0C955252745BB4D000230C5 /* Constants.swift in Sources */,
 				B0F441EE274A59A8003C8DF5 /* Repo.swift in Sources */,
 				B059770B274D210800996077 /* RepoViewModel.swift in Sources */,
+				EE13EA9827DE6B8500D01552 /* UsersCoordinator.swift in Sources */,
 				B05976F4274C372400996077 /* UINavigationController+Line.swift in Sources */,
 				B0597709274D1C7200996077 /* RepoSection.swift in Sources */,
 			);

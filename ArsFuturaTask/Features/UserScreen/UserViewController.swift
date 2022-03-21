@@ -50,6 +50,10 @@ final class UserViewController: UIViewController {
         getData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     // MARK: - PRIVATE METHODS
     
     private func setupNavigation() {
@@ -146,8 +150,6 @@ extension UserViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let repoViewModel = userViewModel.createRepoViewModel(forRepoAt: indexPath)
-        let repoVC = RepoViewController(viewModel: repoViewModel)
-        self.navigationController?.pushViewController(repoVC, animated: true)
+        userViewModel.selectRepo(at: indexPath.row)
     }
 }

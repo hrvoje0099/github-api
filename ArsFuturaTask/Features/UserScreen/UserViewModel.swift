@@ -9,14 +9,15 @@ import Foundation
 
 protocol UserViewModelProtocol: BaseViewModelProtocol {
     var userReposCount: Int { get }
+    var didSelectRepo: ((Users, Repo) -> ())? { get }
     
     func getUserRepos()
     func getUserReposNextPage(_ page: Int)
     func getUserData() -> Users
     func getRepoCellModel(at indexPath: IndexPath) -> Repo
-    func createRepoViewModel(forRepoAt indexPath: IndexPath) -> RepoViewModel
     func getUserDetails()
     func getTotalUserReposCount() -> Int
+    func selectRepo(at index: Int)
 }
 
 final class UserViewModel: BaseViewModel, UserViewModelProtocol {
@@ -26,6 +27,8 @@ final class UserViewModel: BaseViewModel, UserViewModelProtocol {
     var userReposCount: Int {
         return repos.count
     }
+    
+    var didSelectRepo: ((Users, Repo) -> ())?
     
     // MARK: - PRIVATE PROPERTIES
     
@@ -87,11 +90,6 @@ final class UserViewModel: BaseViewModel, UserViewModelProtocol {
         return repos[indexPath.row]
     }
     
-    func createRepoViewModel(forRepoAt indexPath: IndexPath) -> RepoViewModel {
-        let repo = repos[indexPath.row]
-        return RepoViewModel(user, repo)
-    }
-    
     func getUserDetails() {
         repository.getUserDetails(userLoginName: user.login) { [weak self] result in
             switch result{
@@ -105,5 +103,9 @@ final class UserViewModel: BaseViewModel, UserViewModelProtocol {
     
     func getTotalUserReposCount() -> Int {
         return userDetails.publicRepos
+    }
+    
+    func selectRepo(at index: Int) {
+        didSelectRepo?(user, repos[index])
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 protocol UsersViewModelProtocol: BaseViewModelProtocol {
     var usersCount: Int { get }
     var searchUsersTotalCount: Int { get }
+    var didSelectUser: ((Repository, Users) -> ())? { get }
     
     func getUsers()
     func getUserCellModel(at indexPath: IndexPath) -> Users
@@ -17,7 +18,7 @@ protocol UsersViewModelProtocol: BaseViewModelProtocol {
     func getUsersNextPage(sinceUserId: Int)
     func searchUsers(userLoginName: String)
     func getSearchUsersNextPage(userLoginName: String, page: Int)
-    func createUserViewModel(forUserAt indexPath: IndexPath) -> UserViewModel
+    func selectUser(at index: Int)
 }
 
 final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
@@ -29,6 +30,8 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
     }
     
     var searchUsersTotalCount: Int = 0
+    
+    var didSelectUser: ((Repository, Users) -> ())?
     
     // MARK: - PRIVATE PROPERTIES
     
@@ -42,7 +45,7 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
     
     // MARK: - INIT
     
-    init(repository: Repository = Repository()) {
+    init(repository: Repository) {
         self.repository = repository
     }
     
@@ -117,8 +120,7 @@ final class UsersViewModel: BaseViewModel, UsersViewModelProtocol {
         }
     }
     
-    func createUserViewModel(forUserAt indexPath: IndexPath) -> UserViewModel {
-        let user = users[indexPath.row]
-        return UserViewModel(repository, user)
+    func selectUser(at index: Int) {
+        didSelectUser?(repository, users[index])
     }
 }
